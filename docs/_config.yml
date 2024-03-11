@@ -1,0 +1,9 @@
+remote_theme: just-the-docs/just-the-docs@v0.5.2
+title: Z Pool Tool Docs
+logo: https://www.econ.uzh.ch/docroot/logos/uzh_logo_e_pos.svg
+favicon_ico: /assets/favicon.ico
+
+footer_content: "Copyright &copy; <a href=\"https://www.uast.uzh.ch/\">University Registration Center for Study Participants (UZH and ETH)</a>"
+
+mermaid:
+  version: "10.9.0"
