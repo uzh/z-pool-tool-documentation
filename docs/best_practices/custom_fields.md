@@ -22,7 +22,6 @@ The following data types are available:
 
 It is recommended to avoid using the data type `Text` to collect structured data. The text input is free of control and can, for example, be in any language. This helps you to increase the quality of the results when filtering for suitable contacts.
 
-
 ### Select
 
 If you are using required `Select` or `Multi Select` fields, contacts will be forced to select one of the provided answers. If you cannot ensure that one of the provided answers will be suitable, you can add an option `None of the others`.
