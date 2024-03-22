@@ -5,5 +5,21 @@ favicon_ico: /assets/favicon.ico
 
 footer_content: "Copyright &copy; <a href=\"https://www.uast.uzh.ch/\">University Registration Center for Study Participants (UZH and ETH)</a>"
 
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
 mermaid:
   version: "10.9.0"
