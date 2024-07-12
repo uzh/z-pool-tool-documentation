@@ -34,7 +34,7 @@ jobs:
           image: minlag/mermaid-cli:latest
           options: -v ${{ github.workspace }}:/app -w /app
           run: 
-            sudo chmod +x /app/scripts/render-images.sh  
+            chmod +x /app/scripts/render-images.sh  
             /app/scripts/render-images.sh  
       - name: Setup Pages
         uses: actions/configure-pages@v4
