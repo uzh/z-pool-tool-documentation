@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 input_dir="diagrams"
 output_dir="docs/images"
