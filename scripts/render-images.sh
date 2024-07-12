@@ -1,7 +1,7 @@
 #!/bin/bash
 
 input_dir="diagrams"
-output_dir="images"
+output_dir="docs/images"
 
 for file in "$input_dir"/*.mmd; do
   base_name=$(basename "$file" .mmd)

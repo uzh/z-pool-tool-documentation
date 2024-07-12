@@ -22,13 +22,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  build-diagrams:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Generate mermaid diagrams
+      - name: Generate mermaid diagrams with docker
         uses: addnab/docker-run-action@v3
         with:
           image: minlag/mermaid-cli:latest
@@ -36,6 +35,24 @@ jobs:
           run: 
             chmod +x /app/scripts/render-images.sh  
             /app/scripts/render-images.sh  
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: diagrams
+          path: ./docs/images
+
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    needs: build-diagrams
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Download diagrams
+        uses: actions/download-artifact@v3
+        with:
+          name: diagrams
+          path: ./docs/images
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll

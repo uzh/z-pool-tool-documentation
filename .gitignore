@@ -3,5 +3,4 @@ node_modules
 
 docs/_site/
 docs/.jekyll_cache
-
-images/*
+docs/images/*

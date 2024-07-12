@@ -24,7 +24,7 @@ RUN apt-get update \
 
 # Install mermaid js dependencies
 RUN apt-get update \
-  && apt-get y install chromium
+  && apt-get -y install chromium
 
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
