@@ -33,8 +33,9 @@ jobs:
           image: minlag/mermaid-cli:latest
           options: -v ${{ github.workspace }}:/app -w /app
           run: |
+            echo $CI
             chmod +x ./scripts/render-images.sh  
-            ./scripts/render-images.sh  
+            CI=true ./scripts/render-images.sh  
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
