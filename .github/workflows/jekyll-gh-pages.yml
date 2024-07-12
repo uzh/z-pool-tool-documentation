@@ -32,6 +32,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: minlag/mermaid-cli:latest
+          options: -v ${{ github.workspace }}:/app -w /app
           run: /app/scripts/render-images.sh  
       - name: Setup Pages
         uses: actions/configure-pages@v4
