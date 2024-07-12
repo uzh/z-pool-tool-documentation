@@ -1,0 +1,15 @@
+{
+  "name": "pool-documentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:uzh/pool-documentation.git",
+  "author": "Timo Huber <timo.huber@econ.uzh.ch>",
+  "license": "MIT",
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^10.9.1",
+    "mermaid": "^10.9.1"
+  },
+  "scripts": {
+    "mermaid": "./node_modules/.bin/mmdc -p puppeteer-config.json -i graphics/OnlineStudies.mmd -o images/OnlineStudies.png -b transparent"
+  }
+}

@@ -2,3 +2,5 @@
 
 docs/_site/
 docs/.jekyll_cache
+
+node_modules
