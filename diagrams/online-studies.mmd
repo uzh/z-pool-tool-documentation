@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor Contact
+    participant Pool
+    participant Survey Platform
+
+    Pool-)Contact: Invitation (3)
+    Contact->>Pool: Opens invitation link
+    activate Contact
+    Pool-)Survey Platform: Redirects contact to survey URL (4)
+    activate Survey Platform
+    Survey Platform--)Pool: Redirects contact back to callback URL (5)
+    deactivate Survey Platform
+    Pool->>Contact: Completes assignment and displays message (6)
+    deactivate Contact
