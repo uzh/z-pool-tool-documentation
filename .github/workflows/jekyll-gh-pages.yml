@@ -4,7 +4,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["main", "feature/render-mermaid"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,14 +32,15 @@ jobs:
         with:
           image: minlag/mermaid-cli:latest
           options: -v ${{ github.workspace }}:/app -w /app
-          run: 
-            chmod +x /app/scripts/render-images.sh  
-            /app/scripts/render-images.sh  
+          run: |
+            ls
+            chmod +x ./scripts/render-images.sh  
+            ./scripts/render-images.sh  
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: diagrams
-          path: ./docs/images
+          path: docs/images
 
   # Build job
   build:
@@ -48,11 +49,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # - name: Generate mermaid diagrams with docker
+      #   uses: addnab/docker-run-action@v3
+      #   with:
+      #     image: minlag/mermaid-cli:latest
+      #     options: -v ${{ github.workspace }}:/app -w /app
+      #     run: 
+      #       chmod +x /app/scripts/render-images.sh  
+      #       /app/scripts/render-images.sh
       - name: Download diagrams
         uses: actions/download-artifact@v3
         with:
           name: diagrams
-          path: ./docs/images
+          path: docs/images
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
