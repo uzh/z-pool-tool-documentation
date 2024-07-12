@@ -1,7 +1,9 @@
 #!/bin/sh
 
-input_dir="./diagrams"
-output_dir="./docs/images"
+input_dir="diagrams"
+output_dir="docs/images"
+
+mkdir -p "$output_dir"
 
 command_path=$( [ -z "$CI" ] && echo "." || echo "/home/mermaidcli" )
 config_path=$( [ -z "$CI" ] && echo "." || echo "")
