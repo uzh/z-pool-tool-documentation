@@ -12,20 +12,11 @@
           }
         },
         "terminal.integrated.defaultProfile.linux": "zsh",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
-        },
-        "javascript.format.enable": false,
-        "files.associations": {
-          "*.js": "javascriptreact"
-        }
+        "editor.formatOnSave": true
       },
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "eamodio.gitlens",
-        "esbenp.prettier-vscode",
-        "ritwickdey.LiveServer"
+        "ritwickdey.LiveServer",
+        "yzhang.markdown-all-in-one"
       ]
     }
   },

@@ -10,4 +10,3 @@ The page uses the Jekyll theme `just-the-docs`. For more information, visit: htt
 
 To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-./node_modules/.bin/mmdc -i docs/best_practices/online_studies.md -o docs/best_practices/online_studies.md
