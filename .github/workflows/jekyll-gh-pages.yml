@@ -33,7 +33,9 @@ jobs:
         with:
           image: minlag/mermaid-cli:latest
           options: -v ${{ github.workspace }}:/app -w /app
-          run: /app/scripts/render-images.sh  
+          run: 
+            sudo chmod +x /app/scripts/render-images.sh  
+            /app/scripts/render-images.sh  
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
