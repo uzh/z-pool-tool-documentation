@@ -3,6 +3,7 @@ layout: default
 title: Online Studies
 parent: Best Practices
 nav_order: 3
+has_children: true
 ---
 
 # Online Studies
@@ -17,4 +18,4 @@ nav_order: 3
 5. When the contact finished the survey, he/she should be redirected back to the callback url (more details)
 6. The `participated` flag of the assignment will be set and the `participation count` will be updated
 
-![online study workflow](../images/online-studies.svg)
+![online study workflow](../../images/online-studies.svg)

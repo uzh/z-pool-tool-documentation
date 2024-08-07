@@ -2,7 +2,7 @@
 layout: default
 title: Custom Fields
 parent: Best Practices
-nav_order: 2
+nav_order: 1
 ---
 
 # Custom Fields

@@ -2,7 +2,7 @@
 layout: default
 title: Filter
 parent: Best Practices
-nav_order: 3
+nav_order: 2
 ---
 
 # Filter
