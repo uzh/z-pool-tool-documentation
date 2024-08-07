@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Online Studies
-# parent: Best Practices
+parent: Best Practices
 nav_order: 3
 has_children: true
 ---
