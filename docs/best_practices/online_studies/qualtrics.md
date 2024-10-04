@@ -20,16 +20,8 @@ The documentation about how to use Embedded Fields in Qualtrics can be found [he
 
 1. In your Qualtrics survey, create an `Embedded Data` field (Survey Flow > Add new element > Select Embedded Data) and name it the same as the url parameter that contains the `callbackUrl`. Qualtrics will automatically store the URL parameter in this embedded field.
    1. If you want to use a different name, [refer to the section 'Manually store URL parameter'](#manually-store-url-parameter).
-2. On the last page of your survey, you can 
-   1. create a link back to the pool using the following HTML snipped:
-    ```html
-    <a href="${e://Field/your-embedded-field-name}">Finish survey</a>
-    ```
-    2. or redirect the user using javascript
-    ```js
-    const redirect = "${e://Field/your-embedded-field-name}";
-	window.location.href = redirect;
-    ```
+2. Select the "End of Survey" Block in the Survey Builder, select `Redirect to URL` and set the website URL to your embedded field: `${e://Field/your-embedded-field-name}`. You can find the documentation [here](https://www.qualtrics.com/support/survey-platform/survey-module/survey-options/survey-termination/#RedirectingRespondentsToAUrl).
+
 
 ### Manually store URL parameter
 ```js
